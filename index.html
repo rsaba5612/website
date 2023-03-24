@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+<body>
+    
+</body>
+</html>
+<div class="comment-section">
+    <h2>Comments</h2>
+    <ul class="comments">
+      <li class="comment">
+        <div class="comment-details">
+          <div class="user-details">
+            <img src="User Avatar-1.png" alt="User Avatar" class="avatar">
+            <h3 class="user-name">John Doe</h3>
+          </div>
+          <p class="comment-text">This is a great article. Thanks for sharing!</p>
+          <span class="comment-date">3 days ago</span>
+        </div>
+      </li>
+      <li class="comment">
+        <div class="comment-details">
+          <div class="user-details">
+            <img src="User Avatar.png" alt="User Avatar" class="avatar">
+            <h3 class="user-name">Jane Smith</h3>
+          </div>
+          <p class="comment-text">I have a question. Can you please explain ...</p>
+          <span class="comment-date">2 days ago</span>
+        </div>
+      </li>
+    </ul>
+    <form id="comment-form">
+      <h3>Leave a Comment</h3>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="comment">Comment</label>
+        <textarea id="comment" name="comment" required></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
+<script>
+    // Get the form and submit button elements
+    const commentForm = document.getElementById('comment-form');
+    const submitButton = document.getElementById('submit-comment');
+  
+    // Add event listener to submit button
+    submitButton.addEventListener('click', (event) => {
+      // Prevent the form from submitting and refreshing the page
+      event.preventDefault();
+  
+      // Get the form input values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const comment = document.getElementById('comment').value;
+  
+      // Validate the form input
+      if (!name || !email || !comment) {
+        alert('Please fill out all required fields.');
+        return;
+      }
+  
+      // Submit the form using AJAX or other means
+      // ...
+  
+    });
+  </script>
